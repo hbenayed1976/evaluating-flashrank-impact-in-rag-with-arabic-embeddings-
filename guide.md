@@ -45,3 +45,33 @@ We evaluate whether **FlashRank Arabic reranker** improves retrieval quality and
 ## 3️⃣ Running the Script
 ```bash
 python comparaison_3modeles_embeddings_flashreranking_ollama.py
+
+The script will:
+
+Load datasets (qcm_test_140QA.json, dataset_700QA.txt)
+
+Run 6 experiments (3 embeddings × 2 configs)
+
+Print intermediate summaries
+
+Export results into results/rag_comparison_flashrank_arabic.csv
+
+5️⃣ How to Extend
+🔧 Add new embeddings: update MODELS_TO_TEST in the script
+
+🔧 Change dataset: replace dataset_700QA.txt with your corpus
+
+🔧 Modify LLM: change OLLAMA_MODEL (e.g., gemma2:9b)
+
+🔧 Custom reranking: plug in another reranker in FlashRankRetriever
+
+6️⃣ Limitations
+Requires Ollama running locally
+
+Evaluation based mainly on multiple-choice questions
+
+BLEU may not fully capture semantic correctness
+
+7️⃣ Conclusion
+This benchmark provides a reproducible framework for testing Arabic embeddings in RAG pipelines, especially for Islamic jurisprudence datasets.
+It shows the impact of FlashRank Arabic on retrieval quality and final accuracy.
