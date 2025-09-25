@@ -1,0 +1,10 @@
+pandas
+python-dotenv
+langchain
+langchain-community
+langchain-ollama
+flashrank
+pydantic
+scikit-learn
+nltk
+faiss-cpu
